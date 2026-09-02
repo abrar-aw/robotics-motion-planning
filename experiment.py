@@ -29,15 +29,20 @@ ASTAR_GRID_SIZE = 100
 
 RRT_STAR_ITERATIONS = 5000
 
-RESULTS_FILE = "experiment_results.csv"
-SUMMARY_FILE = "experiment_summary.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-RRT_STAR_CONVERGENCE_FILE = "rrt_star_convergence.csv"
-PRM_SAMPLING_FILE = "prm_sampling_experiment.csv"
+# Keep all generated data and figures organized inside the project.
+ANALYSIS_DIR = os.path.join(BASE_DIR, "analysis")
+FIGURE_DIR = os.path.join(BASE_DIR, "figures")
 
-FIGURE_DIR = "figures"
-
+os.makedirs(ANALYSIS_DIR, exist_ok=True)
 os.makedirs(FIGURE_DIR, exist_ok=True)
+
+RESULTS_FILE = os.path.join(ANALYSIS_DIR, "experiment_results.csv")
+SUMMARY_FILE = os.path.join(ANALYSIS_DIR, "experiment_summary.csv")
+
+RRT_STAR_CONVERGENCE_FILE = os.path.join(ANALYSIS_DIR, "rrt_star_convergence.csv")
+PRM_SAMPLING_FILE = os.path.join(ANALYSIS_DIR, "prm_sampling_experiment.csv")
 
 
 # ============================================================

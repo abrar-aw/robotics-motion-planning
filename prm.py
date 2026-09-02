@@ -1,24 +1,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+import os
 import heapq
 
 
 # ============================================================
-# ENVIRONMENT
+# SHARED ENVIRONMENT
 # ============================================================
 
-X_LIMITS = (0, 10)
-Y_LIMITS = (0, 10)
+from environment import X_LIMITS, Y_LIMITS, START, GOAL, OBSTACLES
 
-START = (1, 1)
-GOAL = (9, 9)
 
-OBSTACLES = [
-    (3, 2, 2, 5),
-    (6, 6, 2, 3),
-    (4, 7, 1, 1)
-]
+# Output directory for generated figures
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FIGURE_DIR = os.path.join(BASE_DIR, "figures")
+os.makedirs(FIGURE_DIR, exist_ok=True)
 
 
 # ============================================================
@@ -647,6 +644,12 @@ def plot_prm(
     )
 
     ax.legend()
+
+    plt.savefig(
+        os.path.join(FIGURE_DIR, "prm_motion_planning.png"),
+        dpi=300,
+        bbox_inches="tight"
+    )
 
     plt.show()
 
