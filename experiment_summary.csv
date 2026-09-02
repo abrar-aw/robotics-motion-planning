@@ -1,5 +1,0 @@
-algorithm,success_rate_percent,mean_path_length,std_path_length,median_path_length,mean_computation_time,std_computation_time,median_computation_time,mean_nodes,std_nodes
-RRT,100.00,17.2943,1.8970,16.6381,0.112621,0.099155,0.079419,610.50,259.23
-RRT*,100.00,12.4305,0.0421,12.4246,15.488702,5.509590,11.859159,4116.60,27.03
-PRM,100.00,12.6943,0.1616,12.6453,0.361053,0.008739,0.362395,502.00,0.00
-A*,100.00,13.2969,0.0000,13.2969,0.040929,0.001797,0.040505,3648.00,0.00
